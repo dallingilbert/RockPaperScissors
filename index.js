@@ -29,6 +29,8 @@ function getHumanChoice(){
  *  4. Scissors < Rock, Scissors > Paper
  * ********************************************/
 function getWinner(computer, human) {
+    console.log(`Computer choice: ${computer}, Human Choice: ${human}`);
+
     if (computer === "rock" && human === "paper") {
         console.log('You win! Paper beats Rock.')
         return 1;
@@ -70,6 +72,12 @@ function playSingleRound() {
     console.log(`Human Score: ${humanScore} \tComputer Score: ${computerScore}`)
 
 }
-console.log(getComputerChoice(3));
 
-playSingleRound();
+// Play 3 rounds of rock, paper scissors.
+let rounds = 3;
+
+while (rounds > 0) {
+    playSingleRound();
+    rounds = rounds - 1;
+}
+
